@@ -5,4 +5,20 @@
     <string name="preference">Preferanser</string>
 
 
+    <!--Tekst til StartGame-siden -->
+
+
+    <!--Tekst til About-siden -->
+
+
+    <!--Tekst til Preferences-siden -->
+    <string name="titlePreferences">Preferanser:</string>
+    <string name="title_preferencesQuestions">Velg hvor mange spørsmål du vil få:</string>
+    <string name="btn_5">5</string>
+    <string name="btn_10">10</string>
+    <string name="btn_15">15</string>
+    <string name="title_preferencesLanguage">Velg språk</string>
+    <string name="btn_norwegian">Norsk</string>
+    <string name="btn_german">Tysk</string>
+
 </resources>
