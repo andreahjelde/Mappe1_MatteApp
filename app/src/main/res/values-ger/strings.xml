@@ -1,15 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="app_name">Mappe1_s364756</string>
-    <string name="startGame">Start spill</string>
-    <string name="about">Om spillet</string>
-    <string name="preference">Preferanser</string>
+    <string name="startGame">Spiel beginnen</string>
+    <string name="about">Über das Spiel</string>
+    <string name="preference">Vorlieben</string>
 
 
     <!--Tekst til StartGame-siden -->
     <string-array name="array_oppgaver">
-        <item>matteoppgaver</item>
+        <item>Mathematikprobleme</item>
     </string-array>
-    <string name="title_startGame">Matteoppgaver</string>
+    <string name="title_startGame">Mathematikprobleme</string>
     <string name="test">1+2</string>
     <string name="btn_tall0">0</string>
     <string name="btn_tall1">1</string>
@@ -29,17 +31,16 @@
 
 
     <!--Tekst til About-siden -->
-    <string name="title_about">OM SPILLET</string>
+    <string name="title_about">Über das Spiel</string>
 
 
     <!--Tekst til Preferences-siden -->
-    <string name="titlePreferences">Preferanser:</string>
-    <string name="title_preferencesQuestions">Velg hvor mange spørsmål du vil få:</string>
+    <string name="titlePreferences">Vorlieben:</string>
+    <string name="title_preferencesQuestions">Wählen Sie aus, wie viele Fragen Sie erhalten möchten:</string>
     <string name="btn_5questions">5</string>
     <string name="btn_10questions">10</string>
     <string name="btn_15questions">15</string>
-    <string name="title_preferencesLanguage">Velg språk</string>
-    <string name="btn_norwegian">Norsk</string>
-    <string name="btn_german">Tysk</string>
-
+    <string name="title_preferencesLanguage">Wähle deine Sprache:</string>
+    <string name="btn_norwegian">norwegisch</string>
+    <string name="btn_german">Deutsch</string>
 </resources>

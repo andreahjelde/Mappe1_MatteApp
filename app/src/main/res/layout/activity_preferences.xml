@@ -23,21 +23,24 @@
         />
 
     <Button
+        android:id="@+id/btn_5questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_5"
+        android:text="@string/btn_5questions"
         />
 
     <Button
+        android:id="@+id/btn_10questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_10"/>
+        android:text="@string/btn_10questions"/>
 
 
     <Button
+        android:id="@+id/btn_15questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_15"/>
+        android:text="@string/btn_15questions"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -46,11 +49,14 @@
         />
 
     <Button
+        android:id="@+id/btn_norwegian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
         android:text="@string/btn_norwegian"/>
 
     <Button
+        android:id="@+id/btn_german"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_german"/>
