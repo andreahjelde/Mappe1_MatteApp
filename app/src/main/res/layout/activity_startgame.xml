@@ -89,6 +89,13 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_tall9"/>
 
+    <Button
+        android:id="@+id/btn_svar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_svar"/>
+
+
 
 
 

@@ -1,6 +1,8 @@
 package com.example.mappe1_s364756;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         Button btnStartGame = findViewById(R.id.buttonStartGame);
         Button btnAbout = findViewById(R.id.buttonAbout);
