@@ -6,11 +6,44 @@
 
 
     <!--Tekst til StartGame-siden -->
-    <string-array name="array_oppgaver">
-        <item>matteoppgaver</item>
-    </string-array>
     <string name="title_startGame">Matteoppgaver</string>
-    <string name="test">1+2</string>
+    <string-array name="array_oppgaver">
+        <item>12+10</item>
+        <item>2+1</item>
+        <item>1+0</item>
+        <item>28+2</item>
+        <item>1+2</item>
+        <item>5+9</item>
+        <item>4+10</item>
+        <item>12+2</item>
+        <item>2+22</item>
+        <item>4+3</item>
+        <item>0+0</item>
+        <item>1+1</item>
+        <item>10+10</item>
+        <item>20+10</item>
+        <item>11+2</item>
+    </string-array>
+
+    <string-array name="array_oppgaver_svar">
+        <item>22</item>
+        <item>3</item>
+        <item>1</item>
+        <item>30</item>
+        <item>3</item>
+        <item>14</item>
+        <item>14</item>
+        <item>14</item>
+        <item>24</item>
+        <item>7</item>
+        <item>0</item>
+        <item>2</item>
+        <item>20</item>
+        <item>30</item>
+        <item>14</item>
+    </string-array>
+
+
     <string name="btn_tall0">0</string>
     <string name="btn_tall1">1</string>
     <string name="btn_tall2">2</string>
@@ -23,6 +56,8 @@
     <string name="btn_tall9">9</string>
     <string name="btn_svar">Svar</string>
 
+    <string name="wrongAnswer">"Feil svar. Riktig svar er: "</string>
+    <string name="rightAnswer">Riktig svar</string>
 
 
 

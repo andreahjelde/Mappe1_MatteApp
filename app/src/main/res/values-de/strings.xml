@@ -8,11 +8,8 @@
 
 
     <!--Tekst til StartGame-siden -->
-    <string-array name="array_oppgaver">
-        <item>Mathematikprobleme</item>
-    </string-array>
+
     <string name="title_startGame">Mathematikprobleme</string>
-    <string name="test">1+2</string>
     <string name="btn_tall0">0</string>
     <string name="btn_tall1">1</string>
     <string name="btn_tall2">2</string>
@@ -24,6 +21,9 @@
     <string name="btn_tall8">8</string>
     <string name="btn_tall9">9</string>
     <string name="btn_svar">Antwort</string>
+
+    <string name="wrongAnswer">"Falsche Antwort. Die richtige Antwort ist: "</string>
+    <string name="rightAnswer">Richtige Antwort</string>
 
 
 
