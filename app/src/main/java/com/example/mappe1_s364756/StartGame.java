@@ -11,6 +11,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class StartGame extends AppCompatActivity {
@@ -144,15 +149,18 @@ public class StartGame extends AppCompatActivity {
             }
         });
 
-
-
         //Kode som printer ut første indeks til string_array inn i tekstfeltet
         printOppgave.setText(String.valueOf(array_oppgaver[0]));
 
+        //Når svar-knappen trykkes blir det gjort en sjekk om svaret til brukeren samsvarer med svaret som ligger i listen
+        //Om svaret er riktig får brukeren tilbakemelding om at det er riktig
+        //Om svaret er feil, får brukeren tilbakemelding om at svaret er feil (og hva som er riktig svar)
+        //Deretter settes inputf-feltet til null, og man får et nytt tilfledig spørsmål
         btnSvar.setOnClickListener(new View.OnClickListener() {
             Integer question = 0;
             @Override
             public void onClick(View view) {
+                question = new Random().nextInt(array_oppgaver.length) ;
 
                     if(!inputNumber.getText().toString().equals(array_oppgaver_svar[question])){
                         Toast.makeText(getApplicationContext(),wrongAnswer + (array_oppgaver_svar[question]), Toast.LENGTH_SHORT).show();
@@ -162,14 +170,15 @@ public class StartGame extends AppCompatActivity {
                     }
 
 
-                    question = new Random().nextInt(array_oppgaver.length) ;
-                inputNumber.setText(null);
-                printOppgave.setText(String.valueOf(array_oppgaver[question]));
+
+
+                    inputNumber.setText(null);
+
+                    printOppgave.setText(String.valueOf(array_oppgaver[question]));
+
 
 
             }
         });
     };
-
-
 }
