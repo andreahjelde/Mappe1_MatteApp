@@ -1,6 +1,7 @@
 package com.example.mappe1_s364756;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,17 +20,16 @@ import java.util.Objects;
 import java.util.Random;
 
 public class StartGame extends AppCompatActivity {
-    TextView printOppgave, printArraySvar, feedback, inputNumber;
+    TextView printOppgave, printArraySvar, feedback, inputNumber, points;
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnSvar;
     String tall;
-
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startgame);
-
+        Intent intent=new Intent(this,StartGame.class);
 
         //Henting av string_array
         Resources res = getResources();
@@ -43,6 +43,7 @@ public class StartGame extends AppCompatActivity {
         printArraySvar = (TextView) findViewById(R.id.array_oppgaver_svar);
         inputNumber = (TextView) findViewById(R.id.inputNumber);
         feedback = (TextView) findViewById(R.id.feedback);
+        points = (TextView) findViewById(R.id.points);
 
 
         //henting av innholdet til Button
@@ -149,36 +150,51 @@ public class StartGame extends AppCompatActivity {
             }
         });
 
+
+        int indexQuestion = 0;
+        indexQuestion = new Random().nextInt(array_oppgaver.length) ;
+
         //Kode som printer ut første indeks til string_array inn i tekstfeltet
-        printOppgave.setText(String.valueOf(array_oppgaver[0]));
+        printOppgave.setText(String.valueOf(array_oppgaver[indexQuestion]));
 
         //Når svar-knappen trykkes blir det gjort en sjekk om svaret til brukeren samsvarer med svaret som ligger i listen
         //Om svaret er riktig får brukeren tilbakemelding om at det er riktig
         //Om svaret er feil, får brukeren tilbakemelding om at svaret er feil (og hva som er riktig svar)
         //Deretter settes inputf-feltet til null, og man får et nytt tilfledig spørsmål
+
         btnSvar.setOnClickListener(new View.OnClickListener() {
-            Integer question = 0;
+            //Dette er en teller bare så jeg kan se hvor mange spørsmål som har blitt stilt
+            int count = 0;
+            int indexQuestion = 0;
+
             @Override
             public void onClick(View view) {
-                question = new Random().nextInt(array_oppgaver.length) ;
 
-                    if(!inputNumber.getText().toString().equals(array_oppgaver_svar[question])){
-                        Toast.makeText(getApplicationContext(),wrongAnswer + (array_oppgaver_svar[question]), Toast.LENGTH_SHORT).show();
+                indexQuestion = new Random().nextInt(array_oppgaver.length-1) ;
+                count++;
+
+                if(count <= 15){
+                    if(!inputNumber.getText().toString().equals(array_oppgaver_svar[indexQuestion+1])){
+                        Toast.makeText(getApplicationContext(),wrongAnswer + (array_oppgaver_svar[indexQuestion]), Toast.LENGTH_SHORT).show();
+
                     }
                     else {
                         Toast.makeText(getApplicationContext(),rightAnswer, Toast.LENGTH_SHORT).show();
+
                     }
-
-
-
-
                     inputNumber.setText(null);
-
-                    printOppgave.setText(String.valueOf(array_oppgaver[question]));
-
-
-
+                    printOppgave.setText(String.valueOf(array_oppgaver[indexQuestion]));
+                    points.setText(String.valueOf("Runde: " + count));
+                }
+                else{
+                    inputNumber.setText("SPILLET ER FERDIG");
+                    printOppgave.setText(null);
+                    Toast.makeText(getApplicationContext(),"Spillet er ferdig", Toast.LENGTH_SHORT).show();
+                }
             }
+
+
         });
     };
+
 }
