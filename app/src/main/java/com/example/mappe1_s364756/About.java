@@ -11,5 +11,5 @@ public class About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         Log.d("I siden om spillet", "onCreate");
-    };
+    }
 }
