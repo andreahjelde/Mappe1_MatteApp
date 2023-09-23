@@ -8,7 +8,7 @@
     android:layout_marginTop="50dp"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
-    tools:context=".Preferences">
+    tools:context=".StartGame">
 
     <TextView
         android:layout_width="match_parent"
@@ -126,6 +126,10 @@
             android:text="@string/btn_svar" />
     </GridLayout>
 
+    <EditText
+        android:id="@+id/tekst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 

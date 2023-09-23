@@ -4,16 +4,22 @@ import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 
-public class StartGame extends AppCompatActivity {
+public class StartGame extends AppCompatActivity  implements MinDialog.MittInterface{
     Random rng = new Random();
     int count = 0;
     int runde = 1;
@@ -27,6 +33,16 @@ public class StartGame extends AppCompatActivity {
     String wrongAnswer;
     String rightAnswer;
     ArrayList<Integer> listeMedIndex = new ArrayList<>();
+
+    @Override
+    public void onYesClick() {
+        finish();
+    }
+    @Override
+    public void onNoClick() {
+        return;
+    }
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,6 +58,37 @@ public class StartGame extends AppCompatActivity {
         genererSpm();
 
         startSpill();
+    }
+    //--------------------------------------------------------------------------------------------
+//TextView , printArraySvar, feedback, , points;
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outstate){
+        super.onSaveInstanceState(outstate);
+        outstate.putString("inputNumber", inputNumber.getText().toString());
+        outstate.putString("feedback", feedback.getText().toString());
+        outstate.putIntegerArrayList("listeMedIndex", listeMedIndex);
+        outstate.putInt("count", count );
+        outstate.putInt("runde", runde );
+
+
+    }
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        inputNumber.setText(savedInstanceState.getString("inputNumber"));
+        feedback.setText(savedInstanceState.getString("feedback"));
+        count = savedInstanceState.getInt("count");
+        runde = savedInstanceState.getInt("runde");
+        listeMedIndex = savedInstanceState.getIntegerArrayList("listeMedIndex");
+        startSpill();
+
+    }
+    //--------------------------------------------------------------------------------------------
+    //Viser dialog om man trykker på andorid sin tilbakeknapp
+    @Override
+    public void onBackPressed(){
+        DialogFragment dialog = new MinDialog();
+        dialog.show(getSupportFragmentManager(),"Tittel");
     }
 
     public void initialiserUiElementer(){
@@ -83,15 +130,14 @@ public class StartGame extends AppCompatActivity {
         }
     }
     private void leggTilListenerPaaSvarknapp() {
+
         btnSvar.setOnClickListener(view -> {
             boolean svarErRiktig = inputNumber.getText().toString().equals(array_oppgaver_svar[listeMedIndex.get(count)]);
             if(!svarErRiktig){
-                //Om svaret er riktig får brukeren tilbakemelding om at det er riktig
-                Toast.makeText(getApplicationContext(),wrongAnswer + (array_oppgaver_svar[listeMedIndex.get(count)]), Toast.LENGTH_SHORT).show();
+                feedback.setText(wrongAnswer + array_oppgaver_svar[listeMedIndex.get(count)]);
             }
             else {
-                //Om svaret er feil, får brukeren tilbakemelding om at svaret er feil (og hva som er riktig svar)
-                Toast.makeText(getApplicationContext(),rightAnswer, Toast.LENGTH_SHORT).show();
+               feedback.setText(rightAnswer);
             }
             boolean gameIsDone = runde == antallSpm;
             if(gameIsDone){
@@ -99,14 +145,13 @@ public class StartGame extends AppCompatActivity {
                 return;
             }
             nextRound();
-
         });
     }
     private void hentAntallSpm() {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             try {
-                antallSpm = Integer.parseInt(extras.getString("antallSpm"));
+                antallSpm = Integer.parseInt(Objects.requireNonNull(extras.getString("antallSpm")));
             }catch (Exception ex) {
                 Log.e("CAST_EXTRAS_START_G", ex.toString());
             }
@@ -141,9 +186,10 @@ public class StartGame extends AppCompatActivity {
     }
 
     public void setGamestateDone(){
-        inputNumber.setText("SPILLET ER FERDIG");
+        inputNumber.setText(null);
         printOppgave.setText(null);
-        Toast.makeText(getApplicationContext(),"Spillet er ferdig", Toast.LENGTH_SHORT).show();
+        //feedback.setText(null);
+        feedback.setText("Spillet er ferdig");
     }
 
 

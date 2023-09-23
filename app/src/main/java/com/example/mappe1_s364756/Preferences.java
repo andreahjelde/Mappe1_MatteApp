@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 
 public class Preferences extends AppCompatActivity {
-    private int antallSpm = 15;
+    private int antallSpm = 5;
 
     @Override
     public void onBackPressed(){
@@ -18,6 +18,9 @@ public class Preferences extends AppCompatActivity {
         setResult(RESULT_OK, intent);
         finish();
     };
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +32,6 @@ public class Preferences extends AppCompatActivity {
         Button btn_5questions = findViewById(R.id.btn_5questions);
         Button btn_10questions = findViewById(R.id.btn_10questions);
         Button btn_15questions = findViewById(R.id.btn_15questions);
-
-
-
 
         btn_5questions.setOnClickListener(view -> antallSpm= 5);
 

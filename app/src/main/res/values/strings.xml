@@ -2,7 +2,7 @@
     <string name="app_name">Mappe1_s364756</string>
     <string name="startGame">Start spill</string>
     <string name="about">Om spillet</string>
-    <string name="preference">Preferanser</string>
+    <string name="preference">Instillinger</string>
 
 
     <!--Tekst til StartGame-siden -->
@@ -59,7 +59,10 @@
     <string name="wrongAnswer">"Feil svar. Riktig svar er: "</string>
     <string name="rightAnswer">Riktig svar</string>
 
-
+    <!--Tekst til Dialogboks -->
+    <string name="tittel">Du er i ferd med å avslutte spillet. Er du sikker på at du vil avbryte?</string>
+    <string name="ok">JA</string>
+    <string name="ikkeok">NEI</string>
 
 
 
