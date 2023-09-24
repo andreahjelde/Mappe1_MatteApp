@@ -58,8 +58,9 @@
     <string name="btn_svar">Svar</string>
 
     <string name="wrongAnswer">"Feil svar. Riktig svar er: "</string>
-    <string name="rightAnswer">Riktig svar</string>
 
+    <string name="rightAnswer">Riktig svar</string>
+    <drawable name="ikonRight"></drawable>
     <!--Tekst til Dialogboks -->
     <string name="tittel">Du er i ferd med å avslutte spillet. Er du sikker på at du vil avbryte?</string>
     <string name="ok">JA</string>
@@ -70,6 +71,12 @@
 
     <!--Tekst til About-siden -->
     <string name="title_about">OM SPILLET</string>
+    <string name="info">
+        Lær å addere! For å spille må du skrive inn et svar til et regnestykke.
+        Når du tror du har skrevet riktig svar, trykker du på knappen "start".
+        Du vil få en tilbakemelding om svaret er riktig eller feil, og evt fasiten.
+        En standard runde vil bestå av 5 spårsmål, men dette kan justeres under instillinger.
+        Her kan man velge om en runde skal bestå av 5, 10 eller 15 spørsmål</string>
 
 
     <!--Tekst til Preferences-siden -->

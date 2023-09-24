@@ -2,6 +2,8 @@ package com.example.mappe1_s364756;
 
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
@@ -24,14 +27,12 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
     int count = 0;
     int runde = 1;
     int antallSpm = 15;
-    TextView printOppgave, printArraySvar, feedback, inputNumber, points;
+    TextView printOppgave, feedback, inputNumber, points, equals;
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnSvar;
-    String tall;
+    String tall,wrongAnswer, rightAnswer;
     Button[] knapper;
     String[] array_oppgaver ;
     String[] array_oppgaver_svar;
-    String wrongAnswer;
-    String rightAnswer;
     ArrayList<Integer> listeMedIndex = new ArrayList<>();
 
     @Override
@@ -98,10 +99,12 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
         inputNumber = (TextView) findViewById(R.id.inputNumber);
         feedback = (TextView) findViewById(R.id.feedback);
         points = (TextView) findViewById(R.id.points);
+        equals = (TextView) findViewById(R.id.equals);
         array_oppgaver = res.getStringArray(R.array.array_oppgaver);
         array_oppgaver_svar = res.getStringArray(R.array.array_oppgaver_svar);
         wrongAnswer = res.getString(R.string.wrongAnswer);
         rightAnswer = res.getString(R.string.rightAnswer);
+
 
         //henting av innholdet til Button
         btn0 = (Button) findViewById(R.id.btn_tall0);
@@ -187,7 +190,7 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
     public void setGamestateDone(){
         inputNumber.setText(null);
         printOppgave.setText(null);
-        //feedback.setText(null);
+        equals.setText(null);
         feedback.setText("Spillet er ferdig");
     }
 

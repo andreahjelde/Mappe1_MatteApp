@@ -3,118 +3,179 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
     tools:context=".StartGame">
 
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="86dp"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <TextView
+            android:id="@+id/array_oppgaver"
+            android:layout_width="289dp"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:textSize="60dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/equals"
+            android:layout_width="118dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:text="@string/equals"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/inputNumber"
+            android:layout_width="318dp"
+            android:layout_height="86dp"
+            android:gravity="start"
+            android:textSize="60dp"
+            android:textStyle="bold" />
+    </GridLayout>
+
 
     <TextView
+        android:id="@+id/feedback"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/title_startGame"
-        />
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/array_oppgaver"
-        />
-
-
-    <TextView
-        android:id="@+id/inputNumber"
-        android:layout_width="238dp"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/feedback"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/points"/>
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:rowCount="4"
-        android:columnCount="3"
-        >
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:columnCount="5">
 
         <Button
             android:id="@+id/btn_tall1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall1"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall1"
+            android:textSize="40dp" />
+
 
         <Button
             android:id="@+id/btn_tall2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall2"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall2"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall3"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall3"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall4"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall4"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall5"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall5"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall6"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall6"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall7"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall7"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall8"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall8"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_tall9"/>
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_tall9"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_tall0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
             android:text="@string/btn_tall0"
+            android:textSize="40dp" />
 
-            app:iconTint="#000000" />
 
+    </GridLayout>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
         <Button
             android:id="@+id/btn_svar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_svar"/>
+            android:layout_width="196dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_svar"
+            android:textSize="40dp"
+            android:layout_marginLeft="170dp"
+
+            />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="196dp"
+            android:layout_height="70dp"
+            android:textSize="40dp" />
     </GridLayout>
-
-
 
 
 

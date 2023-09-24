@@ -70,20 +70,19 @@
 
     <Button
         android:id="@+id/btn_norwegian"
-        android:text="@string/btn_norwegian"
-        android:layout_width="230dp"
+        android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:backgroundTint="@color/green"
-        android:textSize="32dp"
         android:drawableEnd="@drawable/ikonnorway"
-        />
+        android:text="@string/btn_norwegian"
+        android:textSize="32dp" />
 
     <Button
         android:id="@+id/btn_german"
         android:text="@string/btn_german"
         android:drawableEnd="@drawable/ikongermany"
-        android:layout_width="230dp"
+        android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
         android:layout_gravity="center_vertical|center_horizontal"

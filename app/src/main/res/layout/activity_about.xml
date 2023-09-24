@@ -3,19 +3,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
     tools:context=".About">
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:textSize="10dp"
         android:text="@string/title_about"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="407dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="@string/info"
+        android:textSize="15dp" />
 
 </LinearLayout>

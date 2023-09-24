@@ -2,32 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:context=".MainActivity"
     tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/buttonStartGame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/startGame" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ikonmatte"
+        android:layout_gravity="center_vertical|center_horizontal"/>
 
     <Button
+        android:id="@+id/buttonStartGame"
+        android:layout_width="394dp"
+        android:layout_height="86dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:backgroundTint="@color/green"
+        android:text="@string/startGame"
+        android:textSize="32dp" />
+    <Button
         android:id="@+id/buttonAbout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/about" />
+        android:text="@string/about"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:backgroundTint="@color/green"
+        android:layout_margin="10dp"
+        android:textSize="18dp"
+        />
 
     <Button
         android:id="@+id/buttonPreference"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/preference" />
+        android:text="@string/preference"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/green"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        />
 
 </LinearLayout>

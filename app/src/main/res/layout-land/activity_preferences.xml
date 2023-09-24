@@ -2,53 +2,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:context=".Preferences"
     tools:ignore="MissingConstraints">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:text="@string/title_preferencesQuestions" />
+        android:layout_height="79dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/title_preferencesQuestions"
+        android:textSize="32dp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_5questions"
-        android:layout_width="match_parent"
+    <GridLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_5questions" />
+        android:layout_gravity="center_vertical|center_horizontal">
+        <Button
+            android:id="@+id/btn_5questions"
+            android:text="@string/btn_5questions"
+            android:layout_marginRight="10dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp"
+            />
 
-    <Button
-        android:id="@+id/btn_10questions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_10questions" />
+        <Button
+            android:id="@+id/btn_10questions"
+            android:text="@string/btn_10questions"
+            android:layout_marginRight="10dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp"
+            />
 
+        <Button
+            android:id="@+id/btn_15questions"
+            android:text="@string/btn_15questions"
+            android:layout_marginRight="10dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp"
+            />
+    </GridLayout>
 
-    <Button
-        android:id="@+id/btn_15questions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_15questions" />
 
     <TextView
+        android:text="@string/title_preferencesLanguage"
+        android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:text="@string/title_preferencesLanguage" />
+        android:layout_height="59dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="32dp"/>
 
     <Button
         android:id="@+id/btn_norwegian"
-        android:layout_width="match_parent"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
-        android:text="@string/btn_norwegian" />
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:backgroundTint="@color/green"
+        android:drawableEnd="@drawable/ikonnorway"
+        android:text="@string/btn_norwegian"
+        android:textSize="32dp" />
 
     <Button
         android:id="@+id/btn_german"
-        android:layout_width="match_parent"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
-        android:text="@string/btn_german" />
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/green"
+        android:drawableEnd="@drawable/ikongermany"
+        android:text="@string/btn_german"
+        android:textSize="32dp" />
 
 </LinearLayout>
