@@ -2,48 +2,38 @@
 
 <resources>
     <string name="app_name">Mappe1_s364756</string>
-    <string name="startGame">Spiel beginnen</string>
-    <string name="about">Über das Spiel</string>
-    <string name="preference">Einstellungen</string>
+    <string name="startGame">SPIEL BEGINNEN</string>
+    <string name="about">ÜBER DAS SPIEL</string>
+    <string name="preference">EINSTELLUNGEN</string>
 
 
     <!--Tekst til StartGame-siden -->
-
-    <string name="title_startGame">Mathematikprobleme</string>
-    <string name="btn_tall0">0</string>
-    <string name="btn_tall1">1</string>
-    <string name="btn_tall2">2</string>
-    <string name="btn_tall3">3</string>
-    <string name="btn_tall4">4</string>
-    <string name="btn_tall5">5</string>
-    <string name="btn_tall6">6</string>
-    <string name="btn_tall7">7</string>
-    <string name="btn_tall8">8</string>
-    <string name="btn_tall9">9</string>
     <string name="btn_svar">Antwort</string>
-    <string name="equals"> = </string>
+
     <string name="wrongAnswer">"Falsche Antwort. Die richtige Antwort ist: "</string>
     <string name="rightAnswer">Richtige Antwort</string>
+    <string name="round">Runden: </string>
+    <string name="gameOver">Das Set ist komplett</string>
 
     <!--Tekst til Dialogboks -->
-    <string name="tittel">Sie sind dabei, das Spiel zu beenden. Bist du sicher, dass du abbrechen möchtest?</string>
+    <string name="tittel">Bist du sicher, dass du abbrechen möchtest?</string>
     <string name="ok">JA</string>
     <string name="ikkeok">NEIN</string>
 
 
 
-
-
     <!--Tekst til About-siden -->
-    <string name="title_about">Über das Spiel</string>
+    <string name="title_about">ÜBER DAS SPIEL</string>
+    <string name="info">
+        Lernen Sie hinzuzufügen! Um zu spielen, müssen Sie eine Antwort auf eine mathematische Aufgabe eingeben.
+         Wenn Sie glauben, die richtige Antwort geschrieben zu haben, klicken Sie auf die Schaltfläche „Start“.
+         Sie erhalten eine Rückmeldung darüber, ob die Antwort richtig oder falsch ist, und ggf. das Fazit.
+         Eine Standardrunde besteht aus 5 Schätzzielen, dies kann jedoch in den Einstellungen angepasst werden.
+         Hier können Sie wählen, ob eine Runde aus 5, 10 oder 15 Fragen bestehen soll</string>
 
 
     <!--Tekst til Preferences-siden -->
-    <string name="titlePreferences">Vorlieben:</string>
-    <string name="title_preferencesQuestions">Wählen Sie aus, wie viele Fragen Sie erhalten möchten:</string>
-    <string name="btn_5questions">5</string>
-    <string name="btn_10questions">10</string>
-    <string name="btn_15questions">15</string>
+    <string name="title_preferencesQuestions">Wählen Sie die Anzahl der Fragen:</string>
     <string name="title_preferencesLanguage">Wähle deine Sprache:</string>
     <string name="btn_norwegian">norwegisch</string>
     <string name="btn_german">Deutsch</string>

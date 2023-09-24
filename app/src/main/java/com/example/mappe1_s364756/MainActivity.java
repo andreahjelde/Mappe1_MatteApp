@@ -10,7 +10,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String antallSpm = "5";
 
-
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
@@ -25,12 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         Button btnStartGame = findViewById(R.id.buttonStartGame);
         Button btnAbout = findViewById(R.id.buttonAbout);
         Button btnPreferences = findViewById(R.id.buttonPreference);
-
 
         /*START SPILL*/
         btnStartGame.setOnClickListener(view -> {
@@ -38,12 +34,14 @@ public class MainActivity extends AppCompatActivity {
             startGameActivityIntent.putExtra("antallSpm", antallSpm);
             startActivity(startGameActivityIntent);
         });
+
         /*OM SPILLET*/
         btnAbout.setOnClickListener(view -> {
             Intent aboutActivityIntent = new Intent(MainActivity.this, About.class);
 
             startActivity(aboutActivityIntent);
         });
+
         /*INNSTILLINGER*/
         btnPreferences.setOnClickListener(view -> {
             Intent innstillingerActivityIntent = new Intent(MainActivity.this, Preferences.class);

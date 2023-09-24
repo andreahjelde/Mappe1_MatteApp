@@ -70,7 +70,7 @@
 
     <Button
         android:id="@+id/btn_norwegian"
-        android:layout_width="268dp"
+        android:layout_width="293dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:backgroundTint="@color/green"
@@ -80,13 +80,13 @@
 
     <Button
         android:id="@+id/btn_german"
-        android:text="@string/btn_german"
-        android:drawableEnd="@drawable/ikongermany"
-        android:layout_width="268dp"
+        android:layout_width="293dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/green"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_marginTop="20dp"
-        android:textSize="32dp"/>
+        android:backgroundTint="@color/green"
+        android:drawableEnd="@drawable/ikongermany"
+        android:text="@string/btn_german"
+        android:textSize="32dp" />
 
 </LinearLayout>

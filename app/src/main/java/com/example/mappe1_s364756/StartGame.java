@@ -29,7 +29,7 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
     int antallSpm = 15;
     TextView printOppgave, feedback, inputNumber, points, equals;
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnSvar;
-    String tall,wrongAnswer, rightAnswer;
+    String tall,wrongAnswer, rightAnswer, round, gameOver;
     Button[] knapper;
     String[] array_oppgaver ;
     String[] array_oppgaver_svar;
@@ -43,7 +43,6 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
     public void onNoClick() {
         return;
     }
-
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -60,8 +59,8 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
 
         startSpill();
     }
-    //--------------------------------------------------------------------------------------------
-//TextView , printArraySvar, feedback, , points;
+
+
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outstate){
         super.onSaveInstanceState(outstate);
@@ -70,9 +69,8 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
         outstate.putIntegerArrayList("listeMedIndex", listeMedIndex);
         outstate.putInt("count", count );
         outstate.putInt("runde", runde );
-
-
     }
+
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -84,7 +82,7 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
         startSpill();
 
     }
-    //--------------------------------------------------------------------------------------------
+
     //Viser dialog om man trykker på andorid sin tilbakeknapp
     @Override
     public void onBackPressed(){
@@ -104,7 +102,8 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
         array_oppgaver_svar = res.getStringArray(R.array.array_oppgaver_svar);
         wrongAnswer = res.getString(R.string.wrongAnswer);
         rightAnswer = res.getString(R.string.rightAnswer);
-
+        round = res.getString(R.string.round);
+        gameOver = res.getString(R.string.gameOver);
 
         //henting av innholdet til Button
         btn0 = (Button) findViewById(R.id.btn_tall0);
@@ -180,18 +179,18 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
         runde++;
 
         printOppgave.setText(String.valueOf(array_oppgaver[listeMedIndex.get(count)]));
-        points.setText("Runde: " + runde);
+        points.setText(round + runde);
     }
     public void startSpill(){
         printOppgave.setText(String.valueOf(array_oppgaver[listeMedIndex.get(count)]));
-        points.setText("Runde: " + runde);
+        points.setText(round + runde);
     }
 
     public void setGamestateDone(){
         inputNumber.setText(null);
         printOppgave.setText(null);
         equals.setText(null);
-        feedback.setText("Spillet er ferdig");
+        feedback.setText(gameOver);
     }
 
 

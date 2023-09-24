@@ -6,7 +6,7 @@
 
 
     <!--Tekst til StartGame-siden -->
-    <string name="title_startGame">Matteoppgaver</string>
+
     <string-array name="array_oppgaver">
         <item>12 + 10 </item>
         <item>2 + 1 </item>
@@ -60,9 +60,11 @@
     <string name="wrongAnswer">"Feil svar. Riktig svar er: "</string>
 
     <string name="rightAnswer">Riktig svar</string>
-    <drawable name="ikonRight"></drawable>
+    <string name="round">Runde: </string>
+    <string name="gameOver">Spillet er ferdig</string>
+
     <!--Tekst til Dialogboks -->
-    <string name="tittel">Du er i ferd med å avslutte spillet. Er du sikker på at du vil avbryte?</string>
+    <string name="tittel">Er du sikker på at du vil avbryte?</string>
     <string name="ok">JA</string>
     <string name="ikkeok">NEI</string>
 
@@ -76,16 +78,15 @@
         Når du tror du har skrevet riktig svar, trykker du på knappen "start".
         Du vil få en tilbakemelding om svaret er riktig eller feil, og evt fasiten.
         En standard runde vil bestå av 5 spårsmål, men dette kan justeres under instillinger.
-        Her kan man velge om en runde skal bestå av 5, 10 eller 15 spørsmål</string>
+        Her kan man velge om en runde skal bestå av 5, 10 eller 15 spørsmål.</string>
 
 
     <!--Tekst til Preferences-siden -->
-    <string name="titlePreferences">Instillinger</string>
     <string name="title_preferencesQuestions">Velg antall spørsmål:</string>
     <string name="btn_5questions">5</string>
     <string name="btn_10questions">10</string>
     <string name="btn_15questions">15</string>
-    <string name="title_preferencesLanguage">Velg språk</string>
+    <string name="title_preferencesLanguage">Velg språk:</string>
     <string name="btn_norwegian">Norsk</string>
     <string name="btn_german">Tysk</string>
 

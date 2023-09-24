@@ -19,8 +19,6 @@ public class Preferences extends AppCompatActivity {
         finish();
     };
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +36,6 @@ public class Preferences extends AppCompatActivity {
         btn_10questions.setOnClickListener(view -> antallSpm = 10);
 
         btn_15questions.setOnClickListener(view -> antallSpm = 15);
-
 
 
         //--------------------VELG SPRÅK---------------------------------------------------

@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/array_oppgaver"
         android:layout_width="match_parent"
-        android:layout_height="97dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:textSize="60dp"
@@ -41,9 +41,9 @@
     <TextView
         android:id="@+id/feedback"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="65dp"
         android:gravity="center"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
 
