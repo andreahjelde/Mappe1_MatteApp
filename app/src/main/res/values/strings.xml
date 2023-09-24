@@ -1,30 +1,31 @@
 <resources>
     <string name="app_name">Mappe1_s364756</string>
-    <string name="startGame">Start spill</string>
-    <string name="about">Om spillet</string>
-    <string name="preference">Instillinger</string>
+    <string name="startGame">START SPILL</string>
+    <string name="about">OM SPILLET</string>
+    <string name="preference">INSTILLINGER</string>
 
 
     <!--Tekst til StartGame-siden -->
     <string name="title_startGame">Matteoppgaver</string>
     <string-array name="array_oppgaver">
-        <item>12 + 10 = </item>
-        <item>2 + 1 = </item>
-        <item>1 + 0 = </item>
-        <item>28 + 2 = </item>
-        <item>1 + 2 = </item>
-        <item>5 + 9 = </item>
-        <item>4 + 10 = </item>
-        <item>12 + 2 = </item>
-        <item>2 + 22 = </item>
-        <item>4 + 3 = </item>
-        <item>0 + 0 = </item>
-        <item>1 + 1 = </item>
-        <item>10 + 10 = </item>
-        <item>20 + 10 = </item>
-        <item>11 + 2 = </item>
+        <item>12 + 10 </item>
+        <item>2 + 1 </item>
+        <item>1 + 0 </item>
+        <item>28 + 2 </item>
+        <item>1 + 2 </item>
+        <item>5 + 9 </item>
+        <item>4 + 10 </item>
+        <item>12 + 2 </item>
+        <item>2 + 22 </item>
+        <item>4 + 3 </item>
+        <item>0 + 0 </item>
+        <item>1 + 1 </item>
+        <item>10 + 10 </item>
+        <item>20 + 10 </item>
+        <item>11 + 2 </item>
     </string-array>
 
+    <string name="equals"> = </string>
     <string-array name="array_oppgaver_svar">
         <item>22</item>
         <item>3</item>
@@ -72,8 +73,8 @@
 
 
     <!--Tekst til Preferences-siden -->
-    <string name="titlePreferences">Preferanser:</string>
-    <string name="title_preferencesQuestions">Velg hvor mange spørsmål du vil få:</string>
+    <string name="titlePreferences">Instillinger</string>
+    <string name="title_preferencesQuestions">Velg antall spørsmål:</string>
     <string name="btn_5questions">5</string>
     <string name="btn_10questions">10</string>
     <string name="btn_15questions">15</string>

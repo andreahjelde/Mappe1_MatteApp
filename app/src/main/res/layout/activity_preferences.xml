@@ -3,62 +3,91 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
     tools:context=".Preferences">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titlePreferences"
-        />
+
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/title_preferencesQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
         />
 
-    <Button
-        android:id="@+id/btn_5questions"
-        android:layout_width="match_parent"
+    <GridLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_5questions"
-        />
+        android:layout_gravity="center_vertical|center_horizontal">
+        <Button
+            android:id="@+id/btn_5questions"
+            android:text="@string/btn_5questions"
+            android:layout_marginRight="10dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp"
+            />
 
-    <Button
-        android:id="@+id/btn_10questions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_10questions"/>
+        <Button
+            android:id="@+id/btn_10questions"
+            android:text="@string/btn_10questions"
+            android:layout_marginRight="10dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp"
+            />
 
+        <Button
+            android:id="@+id/btn_15questions"
+            android:text="@string/btn_15questions"
+            android:layout_marginRight="10dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp"
+            />
+    </GridLayout>
 
-    <Button
-        android:id="@+id/btn_15questions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_15questions"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/title_preferencesLanguage"
-        />
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="32dp"/>
 
     <Button
         android:id="@+id/btn_norwegian"
-        android:layout_width="match_parent"
+        android:text="@string/btn_norwegian"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
-        android:text="@string/btn_norwegian"/>
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:backgroundTint="@color/green"
+        android:textSize="32dp"
+        android:drawableEnd="@drawable/ikonnorway"
+        />
 
     <Button
         android:id="@+id/btn_german"
-        android:layout_width="match_parent"
+        android:text="@string/btn_german"
+        android:drawableEnd="@drawable/ikongermany"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:text="@string/btn_german"/>
+        android:backgroundTint="@color/green"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="32dp"/>
 
 </LinearLayout>

@@ -3,136 +3,160 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
     tools:context=".StartGame">
 
     <TextView
+        android:id="@+id/array_oppgaver"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="350px"
-        android:text="@string/title_startGame"
-        android:textSize="20sp"
+        android:layout_height="97dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="60dp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/array_oppgaver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="350px"
-        android:textSize="16sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/array_oppgaver_svar"/>
+        android:text="@string/equals"
+        android:layout_width="181dp"
+        android:layout_height="40dp"
 
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/feedback"/>
 
     <TextView
         android:id="@+id/inputNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="350px"
-        android:textSize="16sp" />
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:textSize="60dp"
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/feedback"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/points"/>
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:paddingLeft="200px"
-        android:rowCount="4">
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:columnCount="3">
 
         <Button
             android:id="@+id/btn_tall1"
+            android:text="@string/btn_tall1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall1"
-            android:backgroundTint="@color/green"/>
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
 
         <Button
             android:id="@+id/btn_tall2"
+            android:text="@string/btn_tall2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall2" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall3"
+            android:text="@string/btn_tall3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall3" />
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall4"
+            android:text="@string/btn_tall4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall4" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall5"
+            android:text="@string/btn_tall5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall5" />
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall6"
+            android:text="@string/btn_tall6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall6" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall7"
+            android:text="@string/btn_tall7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall7" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall8"
+            android:text="@string/btn_tall8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall8" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall9"
+            android:text="@string/btn_tall9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_tall9" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
 
         <Button
             android:id="@+id/btn_tall0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/btn_tall0"
-            android:backgroundTint="@color/green"
-            />
-
-        <Button
-            android:id="@+id/btn_svar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_svar" />
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/green"
+            android:textSize="32dp" />
+
     </GridLayout>
 
-    <EditText
-        android:id="@+id/tekst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_svar"
+        android:text="@string/btn_svar"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:textSize="32dp"/>
 
-
-
-
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"/>
 
 </LinearLayout>

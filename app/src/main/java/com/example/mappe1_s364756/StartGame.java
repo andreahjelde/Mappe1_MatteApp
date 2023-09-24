@@ -95,7 +95,6 @@ public class StartGame extends AppCompatActivity  implements MinDialog.MittInter
         Resources res = getResources();
         //henting av textView
         printOppgave = (TextView) findViewById(R.id.array_oppgaver);
-        printArraySvar = (TextView) findViewById(R.id.array_oppgaver_svar);
         inputNumber = (TextView) findViewById(R.id.inputNumber);
         feedback = (TextView) findViewById(R.id.feedback);
         points = (TextView) findViewById(R.id.points);
